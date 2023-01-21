@@ -43,3 +43,29 @@ nav ul {
     color: #373B41;
 }
 
+#seccioncontactenos {
+    display: grid;
+    grid-template-areas: "area1 area1 area1 area1"
+                         "area2 area2 area3 area3"
+                         "area4 area4 area5 area5";
+}
+
+#seccioncontactenos h2 {
+    grid-area: area1;
+}
+
+#seccioncontactenos h3#datos {
+    grid-area: area2;
+}
+
+#seccioncontactenos h3#ubicacion {
+    grid-area: area3;
+}
+
+#seccioncontactenos form {
+    grid-area: area4;
+}
+
+#seccioncontactenos div {
+    grid-area: area5;
+}
