@@ -69,3 +69,28 @@ nav ul {
 #seccioncontactenos div {
     grid-area: area5;
 }
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer address {
+    display: flex;
+    flex-direction: column;
+}
+
+#formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+#fomulario#randoEdad {
+    display: flex;
+    flex-direction: column;
+}
+
+#formulario#tipoServicio {
+    display: flex;
+    flex-direction: column;
+}

@@ -140,33 +140,39 @@
     <h2>Contáctame</h2>
     <h3 id="datos">Sus datos</h3>
 
-    <footer>
-      <address>
-        Email: <a href="cmarinp@bolivariano.com">cmarinp@bolivariano.com</a><br>
-        Tel: <a href="tel:+593998663011">0998663011</a><br><br>
-        La Joya<br>
-        Daule<br>
-        Ecuador
-      </address>
-    </footer>
-
-    <form>
-      <label for="nombre">Nombres:</label><input type="text" name="nombre" id="nombre">
-      <label for="apellidos">Apellidos:</label><input type="text" name="apellidos" id="apellidos"><br>
-
-      <label for="edad">Seleccione su rango de edad</label><br>
-      <input type="radio" id="opcion1" name="edad" value="menor25"><label for="opcion1"> menor a 25 años</label>
-      <input type="radio" id="opcion2" name="edad" value="entre26y20"><label for="opcion2"> entre 26 y 30 años</label>
-      <input type="radio" id="opcion3" name="edad" value="mayor31"><label for="opcion3"> mayor a 31 años</label><br><br>
-
-      <label for="tiposervicio">Seleccione el tipo de servicio a consultar</label><br>
-      <input type="checkbox" name="frontend" id="frontend"><label for="frontend">Frontend Dev</label><br>
-      <input type="checkbox" name="backend" id="backend"><label for="backend">Backend
-        Dev</label><br>
-      <input type="checkbox" name="scrum" id="scrum"><label for="scrum">Desarrollo
-        de software</label><br>
-      <input type="checkbox" name="cicd" id="cicd"><label for="cicd">CI/CD</label><br>
-      <button type="submit">Enviar</button>
+    <form id="formulario">
+      <div>
+        <label for="nombre">Nombres:</label><input type="text" name="nombre" id="nombre">
+      </div>
+      <div> <label for="apellidos">Apellidos:</label><input type="text" name="apellidos" id="apellidos">
+      </div>
+      <div>
+        <label for="edad">Seleccione su rango de edad</label>
+      </div>
+      <div id="randoEdad">
+        <div> <input type="radio" id="opcion1" name="edad" value="menor25"><label for="opcion1"> menor a 25 años</label>
+        </div>
+        <div> <input type="radio" id="opcion2" name="edad" value="entre26y20"><label for="opcion2"> entre 26 y 30
+            años</label></div>
+        <div> <input type="radio" id="opcion3" name="edad" value="mayor31"><label for="opcion3"> mayor a 31 años</label>
+        </div>
+      </div>
+      <div>
+        <label for="tiposervicio">Seleccione el tipo de servicio a consultar</label>
+      </div>
+      <div>
+        <div id="tipoServicio">
+          <div><input type="checkbox" name="frontend" id="frontend"><label for="frontend">Frontend Dev</label></div>
+          <div><input type="checkbox" name="backend" id="backend"><label for="backend">Backend
+              Dev</label></div>
+          <div><input type="checkbox" name="scrum" id="scrum"><label for="scrum">Desarrollo
+              de software</label></div>
+          <div><input type="checkbox" name="cicd" id="cicd"><label for="cicd">CI/CD</label></div>
+        </div>
+      </div>
+      <div>
+        <button type="submit">Enviar</button>
+      </div>
     </form>
 
 
@@ -181,6 +187,15 @@
 
   </section>
 
+  <footer>
+    <address>
+      <div class="itemFooter">Email: <a href="cmarinp@bolivariano.com">cmarinp@bolivariano.com</a></div>
+      <div class="itemFooter">Tel: <a href="tel:+593998663011">0998663011</a></div>
+      <div class="itemFooter">La Joya</div>
+      <div class="itemFooter">Daule</div>
+      <div class="itemFooter">Ecuador</div>
+    </address>
+  </footer>
 
 
 </body>
