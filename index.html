@@ -1,203 +1,478 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="public/stylesheets/style.css" />
-  <title>Curriculum Vitae</title>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>MARÍN | Automation & Data Platforms</title>
+
+  <meta name="description" content="Automation, SQL Server, enterprise operations and technology solutions." />
+
+  <meta property="og:title" content="MARÍN | Automation & Data Platforms" />
+  <meta property="og:description" content="Automation, SQL Server and enterprise technology." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://marins.dev" />
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background:#020617;
+      color:#e2e8f0;
+      line-height:1.6;
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    header{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      position:relative;
+      background:
+      radial-gradient(circle at top right, rgba(14,165,233,.25), transparent 25%),
+      radial-gradient(circle at bottom left, rgba(59,130,246,.18), transparent 25%),
+      linear-gradient(180deg,#020617 0%,#0f172a 100%);
+    }
+
+    .language-switch{
+      position:absolute;
+      top:30px;
+      right:40px;
+      display:flex;
+      gap:10px;
+      z-index:10;
+    }
+
+    .lang-btn{
+      border:none;
+      background:rgba(255,255,255,.05);
+      color:#cbd5e1;
+      padding:10px 14px;
+      border-radius:10px;
+      cursor:pointer;
+      transition:.3s ease;
+      border:1px solid rgba(148,163,184,.15);
+    }
+
+    .lang-btn:hover{
+      background:rgba(255,255,255,.1);
+    }
+
+    .lang-btn.active{
+      background:#0ea5e9;
+      color:white;
+      border-color:#0ea5e9;
+    }
+
+    .hero{
+      padding:80px 0;
+    }
+
+    .badge{
+      display:inline-block;
+      padding:10px 18px;
+      border-radius:999px;
+      border:1px solid rgba(56,189,248,.25);
+      background:rgba(56,189,248,.08);
+      color:#7dd3fc;
+      font-size:14px;
+      margin-bottom:28px;
+      letter-spacing:.5px;
+    }
+
+    h1{
+      font-size:78px;
+      line-height:1;
+      margin-bottom:24px;
+      font-weight:800;
+      letter-spacing:-3px;
+    }
+
+    .gradient{
+      background:linear-gradient(90deg,#38bdf8,#0ea5e9,#2563eb);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .subtitle{
+      font-size:28px;
+      color:#cbd5e1;
+      margin-bottom:30px;
+      max-width:850px;
+      font-weight:300;
+    }
+
+    .description{
+      color:#94a3b8;
+      max-width:850px;
+      font-size:18px;
+      margin-bottom:40px;
+    }
+
+    .buttons{
+      display:flex;
+      flex-wrap:wrap;
+      gap:16px;
+    }
+
+    .btn{
+      padding:15px 26px;
+      border-radius:12px;
+      transition:.3s ease;
+      font-weight:bold;
+    }
+
+    .btn-primary{
+      background:#0ea5e9;
+      color:white;
+    }
+
+    .btn-primary:hover{
+      background:#0284c7;
+      transform:translateY(-2px);
+    }
+
+    .btn-secondary{
+      border:1px solid rgba(148,163,184,.2);
+      color:#cbd5e1;
+      background:rgba(255,255,255,.03);
+    }
+
+    .btn-secondary:hover{
+      background:rgba(255,255,255,.06);
+    }
+
+    section{
+      padding:90px 0;
+    }
+
+    h2{
+      font-size:42px;
+      margin-bottom:50px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:24px;
+    }
+
+    .card{
+      background:rgba(15,23,42,.7);
+      border:1px solid rgba(148,163,184,.12);
+      border-radius:20px;
+      padding:32px;
+      transition:.3s ease;
+      backdrop-filter:blur(8px);
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+      border-color:rgba(56,189,248,.35);
+    }
+
+    .card h3{
+      margin-bottom:18px;
+      color:#38bdf8;
+      font-size:22px;
+    }
+
+    .card p{
+      color:#94a3b8;
+    }
+
+    .stack{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+    }
+
+    .tech{
+      padding:12px 16px;
+      border-radius:999px;
+      background:rgba(56,189,248,.08);
+      border:1px solid rgba(56,189,248,.15);
+      color:#7dd3fc;
+      font-size:14px;
+    }
+
+    footer{
+      border-top:1px solid rgba(148,163,184,.12);
+      padding:40px 0;
+      text-align:center;
+      color:#64748b;
+    }
+
+    @media(max-width:768px){
+
+      h1{
+        font-size:52px;
+      }
+
+      .subtitle{
+        font-size:22px;
+      }
+
+      .description{
+        font-size:16px;
+      }
+
+      .language-switch{
+        top:20px;
+        right:20px;
+      }
+
+    }
+
+  </style>
+
 </head>
 
 <body>
 
-  <header>
-    <h1>Curriculum Vitae</h1>
-  </header>
+<header>
 
-  <!-- Nav: Inicio -->
-  <nav>
-    <ul>
-      <li><a href="#secciondatos">Datos Personales</a></li>
-      <li><a href="#seccionredes">Redes Sociales</a></li>
-      <li><a href="#seccionhabilidades">Habilidades</a></li>
-      <li><a href="#secciongaleria">Galería</a></li>
-      <li><a href="#seccioncontactenos">Contáctenos</a></li>
-    </ul>
-  </nav>
-  <!-- Nav: Fin -->
+  <div class="language-switch">
 
-  <section id="secciondatos" class='seccion'>
-    <h2>Datos personales</h2>
+    <button class="lang-btn active" onclick="setLanguage('en')" id="btn-en">
+      EN
+    </button>
 
-    <span>Nombre:</span>
-    <span>Christian Javier</span><br>
-    <span>Apellidos:</span>
-    <span>Marin Piguave</span><br>
+    <button class="lang-btn" onclick="setLanguage('es')" id="btn-es">
+      ES
+    </button>
 
-    <p>¡Hola! Soy ________, con experiencia en desarrollo web en front end y
-      back end. Participo en todas las etapas
-      del ciclo de desarrollo de proyectos web dinámicos. Además, tengo
-      sólidos conocimientos en gestión de proyectos
-      y relaciones con los clientes.</p>
+  </div>
 
-  </section>
+  <div class="container">
 
-  <section id="seccionacademica" class='seccion'>
-    <h2>Información académica</h2>
-    <h3>Tercer nivel</h3>
-    <ul>
-      <li>Licenciado en Sistemas de información</li>
-      <ul>
-        <li>Universidad de Guayaquil</li>
-        <li>2008</li>
-      </ul>
-      <li>Analista en Sistemas Computacionales</li>
-      <ul>
-        <li>Universidad de Guayaquil</li>
-        <li>2004</li>
-      </ul>
-      </li>
-    </ul>
-    <h3>Secundaria</h3>
-    <ul>
-      <li>Liceo Grancolombiano</li>
-      <ul>
-        <li>4to a 6to</li>
-        <li>2000</li>
-      </ul>
-      <li>Leonidas García</li>
-      <ul>
-        <li>1ero a 3ro</li>
-        <li>1997</li>
-      </ul>
-      </li>
-    </ul>
+    <div class="hero">
 
-  </section>
-
-  <section id="seccionredes" class="seccion">
-    <h2>Redes sociales</h2>
-
-    <span><a href="https://www.linkedin.com/">LinkedIn</a></span>
-    <span><a href="https://github.com/">Github</a></span>
-
-  </section>
-
-  <section id="seccionhabilidades" class='seccion'>
-    <h2>Habilidades Profesionales</h2>
-    <ul>
-      <li>HTML & CSS</li>
-      <li>JavaScript</li>
-      <li>ReactJS</li>
-      <li>Django</li>
-      <li>Express</li>
-    </ul>
-
-    <h2>Idiomas</h2>
-    <table>
-      <caption>Habilidad en idiomas</caption>
-      <tr>
-        <th></th>
-        <th>Básico</th>
-        <th>Intermedio</th>
-        <th>Avanzado</th>
-        <th>Nativo</th>
-      </tr>
-      <tr>
-        <th>Inglés</th>
-        <td></td>
-        <td></td>
-        <td>X</td>
-        <td></td>
-      </tr>
-      <tr>
-        <th>Español</th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>X</td>
-      </tr>
-    </table>
-
-    <h2>Contenidos Transversales</h2>
-    <ol>
-      <li>Docker</li>
-      <li>AWS</li>
-      <li>CI/CD</li>
-      <li>Scrum</li>
-    </ol>
-  </section>
-
-  <aside id="secciongaleria" class='seccion'>
-    <img src="public/images/reading.jpg" alt="Reading" width="30%">
-    <img src="https://cdn.pixabay.com/photo/2015/05/29/19/18/cafe-789635_960_720.jpg" alt="Foto de colaboración"
-      width="30%">
-
-  </aside>
-
-  <section id="seccioncontactenos" class='seccion'>
-    <h2>Contáctame</h2>
-    <h3 id="datos">Sus datos</h3>
-
-    <form id="formulario">
-      <div>
-        <label for="nombre">Nombres:</label><input type="text" name="nombre" id="nombre">
+      <div class="badge" data-en="AUTOMATION • DATA • ENTERPRISE TECHNOLOGY"
+           data-es="AUTOMATIZACIÓN • DATOS • TECNOLOGÍA EMPRESARIAL">
+        AUTOMATION • DATA • ENTERPRISE TECHNOLOGY
       </div>
-      <div> <label for="apellidos">Apellidos:</label><input type="text" name="apellidos" id="apellidos">
-      </div>
-      <div>
-        <label for="edad">Seleccione su rango de edad</label>
-      </div>
-      <div id="randoEdad">
-        <div> <input type="radio" id="opcion1" name="edad" value="menor25"><label for="opcion1"> menor a 25 años</label>
-        </div>
-        <div> <input type="radio" id="opcion2" name="edad" value="entre26y20"><label for="opcion2"> entre 26 y 30
-            años</label></div>
-        <div> <input type="radio" id="opcion3" name="edad" value="mayor31"><label for="opcion3"> mayor a 31 años</label>
-        </div>
-      </div>
-      <div>
-        <label for="tiposervicio">Seleccione el tipo de servicio a consultar</label>
-      </div>
-      <div>
-        <div id="tipoServicio">
-          <div><input type="checkbox" name="frontend" id="frontend"><label for="frontend">Frontend Dev</label></div>
-          <div><input type="checkbox" name="backend" id="backend"><label for="backend">Backend
-              Dev</label></div>
-          <div><input type="checkbox" name="scrum" id="scrum"><label for="scrum">Desarrollo
-              de software</label></div>
-          <div><input type="checkbox" name="cicd" id="cicd"><label for="cicd">CI/CD</label></div>
-        </div>
-      </div>
-      <div>
-        <button type="submit">Enviar</button>
-      </div>
-    </form>
 
+      <h1>
+        <span class="gradient">
+          MARÍN
+        </span>
+      </h1>
 
-    <h3 id="ubicacion">Ubicación</h3>
+      <p class="subtitle"
+         data-en="Automation-first approach for enterprise systems, SQL Server environments and operational technology."
+         data-es="Enfoque orientado a automatización para sistemas empresariales, entornos SQL Server y tecnología operacional.">
 
-    <div>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.3063931075512!2d-79.91612460873716!3d-2.0332341038293373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d117d127b10ed%3A0x6a28ae3aafaa59a4!2sUrbanizacion%20La%20Joya%20Etapa%20Platino!5e0!3m2!1ses-419!2sec!4v1673707396588!5m2!1ses-419!2sec"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+        Automation-first approach for enterprise systems, SQL Server environments and operational technology.
+
+      </p>
+
+      <p class="description"
+         data-en="Focused on automation, systems analysis and enterprise technology solutions. Strong background in SQL Server administration, operational efficiency, Microsoft platforms and high transactional environments. Currently exploring workflow automation and orchestration technologies including n8n, PowerShell and SSIS."
+         data-es="Enfocado en automatización, análisis de sistemas y soluciones tecnológicas empresariales. Amplia experiencia en administración SQL Server, eficiencia operativa, plataformas Microsoft y ambientes de alta transaccionalidad. Actualmente explorando tecnologías de automatización y orquestación como n8n, PowerShell y SSIS.">
+
+        Focused on automation, systems analysis and enterprise technology solutions.
+
+      </p>
+
+      <div class="buttons">
+
+        <a class="btn btn-primary"
+           href="/cv"
+           data-en="View CV"
+           data-es="Ver CV">
+          View CV
+        </a>
+
+        <a class="btn btn-secondary"
+           href="https://github.com/cmarin1983"
+           target="_blank">
+          GitHub
+        </a>
+
+        <a class="btn btn-secondary"
+           href="https://www.linkedin.com"
+           target="_blank">
+          LinkedIn
+        </a>
+
+      </div>
+
     </div>
 
-  </section>
+  </div>
 
-  <footer>
-    <address>
-      <div class="itemFooter">Email: <a href="cmarinp@bolivariano.com">cmarinp@bolivariano.com</a></div>
-      <div class="itemFooter">Tel: <a href="tel:+593998663011">0998663011</a></div>
-      <div class="itemFooter">La Joya</div>
-      <div class="itemFooter">Daule</div>
-      <div class="itemFooter">Ecuador</div>
-    </address>
-  </footer>
+</header>
 
+<section>
+
+  <div class="container">
+
+    <h2 data-en="Core Areas"
+        data-es="Áreas Principales">
+      Core Areas
+    </h2>
+
+    <div class="cards">
+
+      <div class="card">
+
+        <h3 data-en="Automation & Orchestration"
+            data-es="Automatización y Orquestación">
+          Automation & Orchestration
+        </h3>
+
+        <p data-en="Automation of operational processes, workflows and enterprise tasks using modern and traditional automation technologies."
+           data-es="Automatización de procesos operativos, flujos de trabajo y tareas empresariales utilizando tecnologías modernas y tradicionales.">
+
+          Automation of operational processes.
+
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3 data-en="SQL Server & Data Platforms"
+            data-es="SQL Server y Plataformas de Datos">
+          SQL Server & Data Platforms
+        </h3>
+
+        <p data-en="Administration, troubleshooting and optimization of SQL Server environments focused on operational continuity and performance."
+           data-es="Administración, troubleshooting y optimización de entornos SQL Server enfocados en continuidad operativa y rendimiento.">
+
+          Administration and optimization.
+
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3 data-en="Systems Analysis"
+            data-es="Análisis de Sistemas">
+          Systems Analysis
+        </h3>
+
+        <p data-en="Analysis, improvement and support of enterprise applications and technology ecosystems."
+           data-es="Análisis, mejora y soporte de aplicaciones empresariales y ecosistemas tecnológicos.">
+
+          Analysis and improvement.
+
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3 data-en="Enterprise Operations"
+            data-es="Operaciones Empresariales">
+          Enterprise Operations
+        </h3>
+
+        <p data-en="Experience supporting critical production systems and enterprise operational environments."
+           data-es="Experiencia soportando sistemas críticos de producción y entornos operativos empresariales.">
+
+          Production and operational support.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <div class="container">
+
+    <h2 data-en="Technology Stack"
+        data-es="Tecnologías">
+      Technology Stack
+    </h2>
+
+    <div class="stack">
+
+      <div class="tech">Automation</div>
+      <div class="tech">SQL Server</div>
+      <div class="tech">T-SQL</div>
+      <div class="tech">PowerShell</div>
+      <div class="tech">n8n</div>
+      <div class="tech">SSIS</div>
+      <div class="tech">.NET</div>
+      <div class="tech">C#</div>
+      <div class="tech">Performance Tuning</div>
+      <div class="tech">Microsoft Technologies</div>
+      <div class="tech">Cloudflare</div>
+      <div class="tech">GitHub Pages</div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <div class="container">
+    © 2026 MARÍN • marins.dev
+  </div>
+
+</footer>
+
+<script>
+
+  function setLanguage(lang){
+
+    localStorage.setItem('language', lang);
+
+    document.documentElement.lang = lang;
+
+    document.querySelectorAll('[data-en]').forEach(element => {
+
+      element.innerHTML = element.getAttribute('data-' + lang);
+
+    });
+
+    document.getElementById('btn-en').classList.remove('active');
+    document.getElementById('btn-es').classList.remove('active');
+
+    document.getElementById('btn-' + lang).classList.add('active');
+
+  }
+
+  const browserLanguage = navigator.language.startsWith('es') ? 'es' : 'en';
+
+  const savedLanguage = localStorage.getItem('language') || browserLanguage;
+
+  setLanguage(savedLanguage);
+
+</script>
 
 </body>
-
 </html>
