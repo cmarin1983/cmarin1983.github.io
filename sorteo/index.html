@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Sorteador | marins.dev</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <header>
+
+    <div class="badge">SORTEO • TRANSPARENTE • ALEATORIO</div>
+
+    <h1>
+      <span class="gradient">🎲 Sorteador</span>
+    </h1>
+
+    <p class="subtitle">
+      Sorteos transparentes y aleatorios con verificación en vivo
+    </p>
+
+    <a class="btn btn-secondary back-link" href="/">
+      &larr; Volver al inicio
+    </a>
+
+  </header>
+
+  <section class="toolbar">
+
+    <div class="config">
+
+      <label>
+        Cantidad de números
+        <select id="maxNumbers">
+          <option>50</option>
+          <option>100</option>
+          <option selected>200</option>
+        </select>
+      </label>
+
+      <label>
+        Ganadores
+        <select id="winnerCount">
+          <option selected>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>5</option>
+          <option>10</option>
+        </select>
+      </label>
+
+      <button id="btnReset" class="btn btn-danger">
+        Reiniciar
+      </button>
+
+    </div>
+
+    <div class="stats">
+      <span>
+        Participantes
+        <strong id="participantCount">0</strong>
+      </span>
+      <span>
+        Números libres
+        <strong id="freeCount">200</strong>
+      </span>
+    </div>
+
+  </section>
+
+  <section id="board" class="board"></section>
+
+  <section id="editor" class="editor hidden">
+
+    <h2>
+      Número
+      <span id="selectedNumber" class="gradient"></span>
+    </h2>
+
+    <input
+      id="participantName"
+      maxlength="60"
+      placeholder="Nombre del participante">
+
+    <div class="editorButtons">
+
+      <button id="btnSave" class="btn btn-primary">
+        Guardar
+      </button>
+
+      <button id="btnDelete" class="btn btn-danger-outline">
+        Liberar número
+      </button>
+
+      <button id="btnCancel" class="btn btn-secondary">
+        Cancelar
+      </button>
+
+    </div>
+
+  </section>
+
+  <section class="draw-section">
+
+    <button id="btnDraw" class="btn btn-primary btn-large">
+      🎲 Iniciar Sorteo
+    </button>
+
+  </section>
+
+  <section id="animation" class="animation hidden">
+
+    <div id="rollingNumber" class="rolling">000</div>
+
+    <p class="rolling-label">Seleccionando ganador...</p>
+
+  </section>
+
+  <section id="results" class="results hidden">
+
+    <h2>🏆 Ganadores</h2>
+
+    <div id="winnerList"></div>
+
+    <button id="btnClearResults" class="btn btn-secondary">
+      Limpiar resultados
+    </button>
+
+  </section>
+
+  <footer>
+    <div class="container">
+      © 2026 MARÍN • marins.dev
+    </div>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
