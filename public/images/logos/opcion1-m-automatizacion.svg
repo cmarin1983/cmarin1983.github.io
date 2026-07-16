@@ -5,13 +5,10 @@
       <stop offset="100%" stop-color="#2563eb"/>
     </linearGradient>
   </defs>
-  <!-- Círculo exterior de contorno sutil -->
   <circle cx="100" cy="100" r="92" fill="none" stroke="rgba(56,189,248,.15)" stroke-width="2"/>
-  <!-- Letra M con flecha de automatización -->
   <g transform="translate(100,100)">
-    <!-- M: extremos arriba (-20), bajan a (35), suben al pico (-40), bajan a (35), suben al extremo (-20) -->
-    <path d="M-50,-20 L-25,35 L0,-40 L25,35 L50,-20" stroke="url(#g1)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    <!-- Flecha de ciclo en la parte inferior -->
+    <!-- M: base izq (35) → pico izq (-35) → valle centro (35) → pico der (-35) → base der (35) -->
+    <path d="M-55,35 L-25,-35 L0,35 L25,-35 L55,35" stroke="url(#g1)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
     <path d="M-55,50 Q0,80 55,50" stroke="url(#g1)" stroke-width="6" stroke-linecap="round" fill="none"/>
     <polygon points="55,50 40,42 40,58" fill="#38bdf8"/>
   </g>

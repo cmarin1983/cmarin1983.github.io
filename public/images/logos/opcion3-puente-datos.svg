@@ -5,20 +5,16 @@
       <stop offset="100%" stop-color="#2563eb"/>
     </linearGradient>
   </defs>
-  <!-- Círculo exterior de contorno sutil -->
   <circle cx="100" cy="100" r="92" fill="none" stroke="rgba(56,189,248,.15)" stroke-width="2"/>
-  <!-- Puente de datos: forma de M -->
   <g transform="translate(100,95)">
-    <!-- M como puente: extremos arriba (-15), bajan a (35), suben al pico (-40), bajan a (35), suben (-15) -->
-    <line x1="-55" y1="-15" x2="-35" y2="35" stroke="url(#g3)" stroke-width="6" stroke-linecap="round"/>
-    <line x1="-35" y1="35" x2="-12" y2="-40" stroke="url(#g3)" stroke-width="6" stroke-linecap="round"/>
-    <line x1="-12" y1="-40" x2="0" y2="25" stroke="url(#g3)" stroke-width="6" stroke-linecap="round"/>
-    <line x1="0" y1="25" x2="12" y2="-40" stroke="url(#g3)" stroke-width="6" stroke-linecap="round"/>
-    <line x1="12" y1="-40" x2="35" y2="35" stroke="url(#g3)" stroke-width="6" stroke-linecap="round"/>
-    <line x1="35" y1="35" x2="55" y2="-15" stroke="url(#g3)" stroke-width="6" stroke-linecap="round"/>
+    <!-- M puente: base izq (35) → pico izq (-35) → valle centro (35) → pico der (-35) → base der (35) -->
+    <line x1="-55" y1="35" x2="-25" y2="-35" stroke="url(#g3)" stroke-width="6" stroke-linecap="round"/>
+    <line x1="-25" y1="-35" x2="0" y2="35" stroke="url(#g3)" stroke-width="6" stroke-linecap="round"/>
+    <line x1="0" y1="35" x2="25" y2="-35" stroke="url(#g3)" stroke-width="6" stroke-linecap="round"/>
+    <line x1="25" y1="-35" x2="55" y2="35" stroke="url(#g3)" stroke-width="6" stroke-linecap="round"/>
     <!-- Arco inferior del puente -->
-    <path d="M-45,35 Q0,65 45,35" stroke="url(#g3)" stroke-width="4" stroke-linecap="round" fill="none"/>
-    <!-- Flujo de datos bajo el puente -->
+    <path d="M-50,35 Q0,70 50,35" stroke="url(#g3)" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <!-- Flujo de datos -->
     <path d="M-60,50 Q-30,65 0,55 Q30,45 60,60" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" fill="none" opacity=".5"/>
     <circle cx="-60" cy="50" r="3" fill="#38bdf8" opacity=".8"/>
     <circle cx="-30" cy="65" r="2" fill="#38bdf8" opacity=".8"/>
