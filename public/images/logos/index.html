@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logos - MARÍN</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #020617;
+      color: #e2e8f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+    h1 {
+      font-size: 42px;
+      margin-bottom: 8px;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+    .degradado {
+      background: linear-gradient(90deg,#38bdf8,#0ea5e9,#2563eb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitulo {
+      color: #94a3b8;
+      font-size: 18px;
+      margin-bottom: 50px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      max-width: 1100px;
+      width: 100%;
+    }
+    .tarjeta {
+      background: rgba(15,23,42,.7);
+      border: 1px solid rgba(148,163,184,.12);
+      border-radius: 20px;
+      padding: 40px 30px 30px;
+      text-align: center;
+      transition: .3s ease;
+    }
+    .tarjeta:hover {
+      transform: translateY(-4px);
+      border-color: rgba(56,189,248,.3);
+    }
+    .tarjeta img {
+      width: 160px;
+      height: 160px;
+      margin-bottom: 20px;
+    }
+    .tarjeta h2 {
+      color: #7dd3fc;
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+    .tarjeta p {
+      color: #94a3b8;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(56,189,248,.08);
+      border: 1px solid rgba(56,189,248,.2);
+      color: #7dd3fc;
+      font-size: 12px;
+      margin-bottom: 16px;
+    }
+    .enlace {
+      display: inline-block;
+      margin-top: 50px;
+      padding: 12px 24px;
+      border-radius: 12px;
+      border: 1px solid rgba(148,163,184,.2);
+      color: #cbd5e1;
+      text-decoration: none;
+      transition: .3s;
+    }
+    .enlace:hover {
+      background: rgba(255,255,255,.06);
+    }
+  </style>
+</head>
+<body>
+  <h1><span class="degradado">MARÍN</span></h1>
+  <p class="subtitulo">Propuestas de Logotipo</p>
+
+  <div class="grid">
+
+    <div class="tarjeta">
+      <div class="badge">OPCIÓN 1</div>
+      <img src="opcion1-m-automatizacion.svg" alt="Logo opción 1">
+      <h2>M + Automatización</h2>
+      <p>La letra M formada con trazos dinámicos, acompañada de una flecha de ciclo que representa automatización y procesos continuos. Simple, tecnológico y directo.</p>
+    </div>
+
+    <div class="tarjeta">
+      <div class="badge">OPCIÓN 2</div>
+      <img src="opcion2-nodos-datos.svg" alt="Logo opción 2">
+      <h2>Nodos de Datos</h2>
+      <p>Una M construida mediante nodos interconectados, representando datos, redes y sistemas. Las partículas orbitantes refuerzan la idea de flujo de información.</p>
+    </div>
+
+    <div class="tarjeta">
+      <div class="badge">OPCIÓN 3</div>
+      <img src="opcion3-puente-datos.svg" alt="Logo opción 3">
+      <h2>Puente de Datos</h2>
+      <p>Una M que es también un puente, con un arco inferior y pilares. Representa conexión entre sistemas, datos y personas. Pequeños puntos de datos fluyen bajo el puente.</p>
+    </div>
+
+  </div>
+
+  <a class="enlace" href="/">← Volver a marins.dev</a>
+</body>
+</html>
