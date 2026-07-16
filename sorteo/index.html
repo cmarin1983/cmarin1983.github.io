@@ -15,33 +15,33 @@
 
 <body>
 
-<div class="container">
+<div class="contenedor">
 
   <header>
 
-    <div class="badge">SORTEO • TRANSPARENTE • ALEATORIO</div>
+    <div class="insignia">SORTEO • TRANSPARENTE • ALEATORIO</div>
 
     <h1>
-      <span class="gradient">🎲 Sorteador</span>
+      <span class="degradado">🎲 Sorteador</span>
     </h1>
 
-    <p class="subtitle">
+    <p class="subtitulo">
       Sorteos transparentes y aleatorios con verificación en vivo
     </p>
 
-    <a class="btn btn-secondary back-link" href="/">
+    <a class="btn btn-secundario enlace-volver" href="/">
       &larr; Volver al inicio
     </a>
 
   </header>
 
-  <section class="toolbar">
+  <section class="barra-herramientas">
 
-    <div class="config">
+    <div class="configuracion">
 
       <label>
         Cantidad de números
-        <select id="maxNumbers">
+        <select id="selectNumerosMaximos">
           <option>50</option>
           <option>100</option>
           <option selected>200</option>
@@ -50,7 +50,7 @@
 
       <label>
         Ganadores
-        <select id="winnerCount">
+        <select id="selectCantidadGanadores">
           <option selected>1</option>
           <option>2</option>
           <option>3</option>
@@ -59,50 +59,50 @@
         </select>
       </label>
 
-      <button id="btnReset" class="btn btn-danger">
+      <button id="btnReiniciar" class="btn btn-peligro">
         Reiniciar
       </button>
 
     </div>
 
-    <div class="stats">
+    <div class="estadisticas">
       <span>
         Participantes
-        <strong id="participantCount">0</strong>
+        <strong id="contadorParticipantes">0</strong>
       </span>
       <span>
         Números libres
-        <strong id="freeCount">200</strong>
+        <strong id="contadorLibres">200</strong>
       </span>
     </div>
 
   </section>
 
-  <section id="board" class="board"></section>
+  <section id="tablero" class="tablero"></section>
 
-  <section id="editor" class="editor hidden">
+  <section id="editor" class="editor oculto">
 
     <h2>
       Número
-      <span id="selectedNumber" class="gradient"></span>
+      <span id="numeroSeleccionado" class="degradado"></span>
     </h2>
 
     <input
-      id="participantName"
+      id="nombreParticipante"
       maxlength="60"
       placeholder="Nombre del participante">
 
-    <div class="editorButtons">
+    <div class="botones-editor">
 
-      <button id="btnSave" class="btn btn-primary">
+      <button id="btnGuardar" class="btn btn-primario">
         Guardar
       </button>
 
-      <button id="btnDelete" class="btn btn-danger-outline">
+      <button id="btnEliminar" class="btn btn-peligro-borde">
         Liberar número
       </button>
 
-      <button id="btnCancel" class="btn btn-secondary">
+      <button id="btnCancelar" class="btn btn-secundario">
         Cancelar
       </button>
 
@@ -110,36 +110,36 @@
 
   </section>
 
-  <section class="draw-section">
+  <section class="seccion-sorteo">
 
-    <button id="btnDraw" class="btn btn-primary btn-large">
+    <button id="btnSortear" class="btn btn-primario btn-grande">
       🎲 Iniciar Sorteo
     </button>
 
   </section>
 
-  <section id="animation" class="animation hidden">
+  <section id="animacion" class="animacion oculto">
 
-    <div id="rollingNumber" class="rolling">000</div>
+    <div id="numeroGirando" class="numero-girando">000</div>
 
-    <p class="rolling-label">Seleccionando ganador...</p>
+    <p class="etiqueta-girando">Seleccionando ganador...</p>
 
   </section>
 
-  <section id="results" class="results hidden">
+  <section id="resultados" class="resultados oculto">
 
     <h2>🏆 Ganadores</h2>
 
-    <div id="winnerList"></div>
+    <div id="listaGanadores"></div>
 
-    <button id="btnClearResults" class="btn btn-secondary">
+    <button id="btnLimpiarResultados" class="btn btn-secundario">
       Limpiar resultados
     </button>
 
   </section>
 
   <footer>
-    <div class="container">
+    <div class="contenedor">
       © 2026 MARÍN • marins.dev
     </div>
   </footer>

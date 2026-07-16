@@ -1,3 +1,4 @@
+/* ─── Reinicio básico de estilos ─── */
 * {
   margin: 0;
   padding: 0;
@@ -21,13 +22,13 @@ a {
   color: inherit;
 }
 
-.container {
+.contenedor {
   width: 90%;
   max-width: 1200px;
   margin: auto;
 }
 
-/* ── Header ── */
+/* ─── Encabezado ─── */
 header {
   padding: 80px 0 40px;
   text-align: center;
@@ -37,7 +38,7 @@ header {
     linear-gradient(180deg, #020617 0%, #0f172a 100%);
 }
 
-.badge {
+.insignia {
   display: inline-block;
   padding: 10px 18px;
   border-radius: 999px;
@@ -57,13 +58,13 @@ h1 {
   letter-spacing: -2px;
 }
 
-.gradient {
+.degradado {
   background: linear-gradient(90deg, #38bdf8, #0ea5e9, #2563eb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.subtitle {
+.subtitulo {
   font-size: 20px;
   color: #94a3b8;
   margin-bottom: 24px;
@@ -73,11 +74,11 @@ h1 {
   font-weight: 300;
 }
 
-.back-link {
+.enlace-volver {
   display: inline-block;
 }
 
-/* ── Buttons ── */
+/* ─── Botones ─── */
 .btn {
   padding: 12px 22px;
   border-radius: 12px;
@@ -92,51 +93,51 @@ h1 {
   transform: translateY(-2px);
 }
 
-.btn-primary {
+.btn-primario {
   background: #0ea5e9;
   color: white;
 }
 
-.btn-primary:hover {
+.btn-primario:hover {
   background: #0284c7;
 }
 
-.btn-secondary {
+.btn-secundario {
   border: 1px solid rgba(148,163,184,.2);
   color: #cbd5e1;
   background: rgba(255,255,255,.03);
 }
 
-.btn-secondary:hover {
+.btn-secundario:hover {
   background: rgba(255,255,255,.06);
 }
 
-.btn-danger {
+.btn-peligro {
   background: #dc2626;
   color: white;
 }
 
-.btn-danger:hover {
+.btn-peligro:hover {
   background: #b91c1c;
 }
 
-.btn-danger-outline {
+.btn-peligro-borde {
   border: 1px solid rgba(220,38,38,.4);
   color: #fca5a5;
   background: rgba(220,38,38,.08);
 }
 
-.btn-danger-outline:hover {
+.btn-peligro-borde:hover {
   background: rgba(220,38,38,.15);
 }
 
-.btn-large {
+.btn-grande {
   padding: 18px 40px;
   font-size: 20px;
 }
 
-/* ── Toolbar ── */
-.toolbar {
+/* ─── Barra de herramientas ─── */
+.barra-herramientas {
   padding: 30px 0;
   display: flex;
   flex-wrap: wrap;
@@ -145,14 +146,14 @@ h1 {
   gap: 20px;
 }
 
-.config {
+.configuracion {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 16px;
 }
 
-.config label {
+.configuracion label {
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -161,7 +162,7 @@ h1 {
   font-weight: 600;
 }
 
-.config select {
+.configuracion select {
   padding: 10px 14px;
   border-radius: 10px;
   border: 1px solid rgba(148,163,184,.15);
@@ -171,34 +172,34 @@ h1 {
   cursor: pointer;
 }
 
-.config select:focus {
+.configuracion select:focus {
   outline: none;
   border-color: #0ea5e9;
 }
 
-.stats {
+.estadisticas {
   display: flex;
   gap: 24px;
   color: #94a3b8;
   font-size: 14px;
 }
 
-.stats strong {
+.estadisticas strong {
   color: #7dd3fc;
   font-size: 20px;
   display: block;
   margin-top: 4px;
 }
 
-/* ── Board ── */
-.board {
+/* ─── Tablero de números ─── */
+.tablero {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
   gap: 8px;
   padding: 30px 0;
 }
 
-.cell {
+.celda {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -214,18 +215,18 @@ h1 {
   position: relative;
 }
 
-.cell:hover {
+.celda:hover {
   border-color: rgba(56,189,248,.35);
   transform: translateY(-2px);
 }
 
-.cell .number {
+.celda .numero {
   font-size: 13px;
   color: #64748b;
   font-weight: 600;
 }
 
-.cell .name {
+.celda .nombre {
   font-size: 10px;
   color: #7dd3fc;
   text-align: center;
@@ -234,23 +235,24 @@ h1 {
   max-width: 100%;
 }
 
-.cell.taken {
+.celda.ocupado {
   border-color: rgba(56,189,248,.25);
   background: rgba(56,189,248,.08);
 }
 
-.cell.winner {
+.celda.ganador {
   border-color: #fbbf24;
   background: rgba(251,191,36,.15);
-  animation: pulse-winner 1s ease infinite;
+  animation: pulso-ganador 1s ease infinite;
 }
 
-@keyframes pulse-winner {
+/* Animación de pulso en las celdas ganadoras */
+@keyframes pulso-ganador {
   0%, 100% { box-shadow: 0 0 0 0 rgba(251,191,36,.4); }
   50% { box-shadow: 0 0 0 8px rgba(251,191,36,0); }
 }
 
-.cell .winner-badge {
+.celda .medalla {
   position: absolute;
   top: -6px;
   right: -6px;
@@ -266,7 +268,7 @@ h1 {
   justify-content: center;
 }
 
-/* ── Editor Panel ── */
+/* ─── Panel del editor ─── */
 .editor {
   background: rgba(15,23,42,.7);
   border: 1px solid rgba(148,163,184,.12);
@@ -281,7 +283,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-#participantName {
+#nombreParticipante {
   width: 100%;
   padding: 14px 18px;
   border-radius: 12px;
@@ -292,66 +294,67 @@ h1 {
   margin-bottom: 20px;
 }
 
-#participantName:focus {
+#nombreParticipante:focus {
   outline: none;
   border-color: #0ea5e9;
 }
 
-#participantName::placeholder {
+#nombreParticipante::placeholder {
   color: #64748b;
 }
 
-.editorButtons {
+.botones-editor {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
 }
 
-/* ── Draw Section ── */
-.draw-section {
+/* ─── Sección del sorteo ─── */
+.seccion-sorteo {
   text-align: center;
   padding: 40px 0;
 }
 
-/* ── Animation ── */
-.animation {
+/* ─── Animación del sorteo ─── */
+.animacion {
   text-align: center;
   padding: 40px 0;
 }
 
-.rolling {
+.numero-girando {
   font-size: 120px;
   font-weight: 800;
   background: linear-gradient(90deg, #38bdf8, #0ea5e9, #2563eb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: 'Courier New', Courier, monospace;
-  animation: flicker .1s ease infinite;
+  animation: parpadeo .1s ease infinite;
 }
 
-@keyframes flicker {
+/* Efecto de parpadeo rápido para la ruleta */
+@keyframes parpadeo {
   0%, 100% { opacity: 1; }
   50% { opacity: .8; }
 }
 
-.rolling-label {
+.etiqueta-girando {
   color: #94a3b8;
   font-size: 18px;
   margin-top: 12px;
 }
 
-/* ── Results ── */
-.results {
+/* ─── Resultados ─── */
+.resultados {
   padding: 40px 0;
   text-align: center;
 }
 
-.results h2 {
+.resultados h2 {
   font-size: 36px;
   margin-bottom: 30px;
 }
 
-#winnerList {
+#listaGanadores {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -359,7 +362,7 @@ h1 {
   margin-bottom: 30px;
 }
 
-.winner-card {
+.tarjeta-ganador {
   background: rgba(15,23,42,.7);
   border: 1px solid #fbbf24;
   border-radius: 16px;
@@ -368,7 +371,7 @@ h1 {
   min-width: 160px;
 }
 
-.winner-card .winner-number {
+.tarjeta-ganador .numero-ganador {
   font-size: 32px;
   font-weight: 800;
   background: linear-gradient(90deg, #38bdf8, #0ea5e9, #2563eb);
@@ -376,14 +379,14 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
-.winner-card .winner-name {
+.tarjeta-ganador .nombre-ganador {
   color: #fbbf24;
   font-size: 18px;
   margin-top: 8px;
   font-weight: 600;
 }
 
-/* ── Footer ── */
+/* ─── Pie de página ─── */
 footer {
   border-top: 1px solid rgba(148,163,184,.12);
   padding: 40px 0;
@@ -392,44 +395,44 @@ footer {
   margin-top: 40px;
 }
 
-/* ── Utility ── */
-.hidden {
+/* ─── Clase utilitaria para ocultar elementos ─── */
+.oculto {
   display: none !important;
 }
 
-/* ── Responsive ── */
+/* ─── Diseño responsive para dispositivos móviles ─── */
 @media (max-width: 768px) {
   h1 { font-size: 38px; }
 
-  .subtitle { font-size: 17px; }
+  .subtitulo { font-size: 17px; }
 
-  .board {
+  .tablero {
     grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
     gap: 6px;
   }
 
-  .cell { min-height: 50px; }
+  .celda { min-height: 50px; }
 
-  .cell .number { font-size: 11px; }
+  .celda .numero { font-size: 11px; }
 
-  .cell .name { font-size: 9px; }
+  .celda .nombre { font-size: 9px; }
 
-  .rolling { font-size: 72px; }
+  .numero-girando { font-size: 72px; }
 
-  .toolbar {
+  .barra-herramientas {
     flex-direction: column;
     align-items: stretch;
   }
 
-  .config {
+  .configuracion {
     justify-content: center;
   }
 
-  .stats {
+  .estadisticas {
     justify-content: center;
   }
 
-  .btn-large {
+  .btn-grande {
     width: 100%;
   }
 }
