@@ -9,10 +9,10 @@
   <circle cx="100" cy="100" r="92" fill="none" stroke="rgba(56,189,248,.15)" stroke-width="2"/>
   <!-- Letra M con flecha de automatización -->
   <g transform="translate(100,100)">
-    <!-- M central -->
-    <path d="M-50,-40 L-30,15 L0,-25 L30,15 L50,-40" stroke="url(#g1)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <!-- M central: extremos arriba, baja al centro, sube al medio, vuelve a bajar -->
+    <path d="M-50,-35 L-25,30 L0,-10 L25,30 L50,-35" stroke="url(#g1)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
     <!-- Flecha de ciclo en la parte inferior -->
-    <path d="M-55,40 Q0,70 55,40" stroke="url(#g1)" stroke-width="6" stroke-linecap="round" fill="none"/>
-    <polygon points="55,40 40,32 40,48" fill="#38bdf8"/>
+    <path d="M-55,45 Q0,75 55,45" stroke="url(#g1)" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <polygon points="55,45 40,37 40,53" fill="#38bdf8"/>
   </g>
 </svg>

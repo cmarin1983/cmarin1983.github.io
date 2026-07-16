@@ -7,21 +7,23 @@
   </defs>
   <!-- Círculo exterior de contorno sutil -->
   <circle cx="100" cy="100" r="92" fill="none" stroke="rgba(56,189,248,.15)" stroke-width="2"/>
-  <!-- Puente de datos: forma de M que es también un puente -->
+  <!-- Puente de datos: forma de M -->
   <g transform="translate(100,95)">
-    <!-- Arco del puente (parte inferior de la M) -->
-    <path d="M-55,20 C-55,50 0,55 0,55 C0,55 55,50 55,20" stroke="url(#g3)" stroke-width="5" stroke-linecap="round" fill="none"/>
-    <!-- Pilares del puente (parte superior de la M) -->
-    <line x1="-55" y1="20" x2="-35" y2="-40" stroke="url(#g3)" stroke-width="7" stroke-linecap="round"/>
-    <line x1="-10" y1="25" x2="0" y2="-45" stroke="url(#g3)" stroke-width="7" stroke-linecap="round"/>
-    <line x1="10" y1="25" x2="0" y2="-45" stroke="url(#g3)" stroke-width="7" stroke-linecap="round"/>
-    <line x1="55" y1="20" x2="35" y2="-40" stroke="url(#g3)" stroke-width="7" stroke-linecap="round"/>
-    <!-- Línea de flujo de datos bajo el puente -->
-    <path d="M-60,40 Q-30,55 0,45 Q30,35 60,50" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" fill="none" opacity=".5"/>
-    <circle cx="-60" cy="40" r="3" fill="#38bdf8" opacity=".8"/>
-    <circle cx="-30" cy="55" r="2" fill="#38bdf8" opacity=".8"/>
-    <circle cx="0" cy="45" r="3" fill="#38bdf8" opacity=".8"/>
-    <circle cx="30" cy="35" r="2" fill="#38bdf8" opacity=".8"/>
-    <circle cx="60" cy="50" r="3" fill="#38bdf8" opacity=".8"/>
+    <!-- Pilares del puente (la M): extremos arriba, bajan, suben al centro, vuelven a bajar -->
+    <line x1="-55" y1="-35" x2="-35" y2="35" stroke="url(#g3)" stroke-width="7" stroke-linecap="round"/>
+    <line x1="-35" y1="35" x2="-12" y2="-5" stroke="url(#g3)" stroke-width="7" stroke-linecap="round"/>
+    <line x1="-12" y1="-5" x2="0" y2="35" stroke="url(#g3)" stroke-width="7" stroke-linecap="round"/>
+    <line x1="0" y1="35" x2="12" y2="-5" stroke="url(#g3)" stroke-width="7" stroke-linecap="round"/>
+    <line x1="12" y1="-5" x2="35" y2="35" stroke="url(#g3)" stroke-width="7" stroke-linecap="round"/>
+    <line x1="35" y1="35" x2="55" y2="-35" stroke="url(#g3)" stroke-width="7" stroke-linecap="round"/>
+    <!-- Arco inferior del puente -->
+    <path d="M-45,35 Q0,65 45,35" stroke="url(#g3)" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <!-- Flujo de datos bajo el puente -->
+    <path d="M-60,50 Q-30,65 0,55 Q30,45 60,60" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" fill="none" opacity=".5"/>
+    <circle cx="-60" cy="50" r="3" fill="#38bdf8" opacity=".8"/>
+    <circle cx="-30" cy="65" r="2" fill="#38bdf8" opacity=".8"/>
+    <circle cx="0" cy="55" r="3" fill="#38bdf8" opacity=".8"/>
+    <circle cx="30" cy="45" r="2" fill="#38bdf8" opacity=".8"/>
+    <circle cx="60" cy="60" r="3" fill="#38bdf8" opacity=".8"/>
   </g>
 </svg>
